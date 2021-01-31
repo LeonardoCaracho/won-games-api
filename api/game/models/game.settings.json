@@ -16,10 +16,11 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "name"
+      "targetField": "name",
+      "required": true
     },
     "short_description": {
-      "type": "string",
+      "type": "text",
       "required": true,
       "maxLength": 160
     },
@@ -33,18 +34,17 @@
       "default": 0
     },
     "release_date": {
-      "type": "date",
-      "private": false
+      "type": "date"
     },
     "rating": {
       "type": "enumeration",
       "enum": [
-        "FREE",
-        "pegi3",
-        "pegi7",
-        "pegi12",
-        "pegi16",
-        "pegi18"
+        "BR0",
+        "BR10",
+        "BR12",
+        "BR14",
+        "BR16",
+        "BR18"
       ]
     },
     "cover": {

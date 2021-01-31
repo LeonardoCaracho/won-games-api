@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
+import styled, { css } from "styled-components";
 
 const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -8,8 +7,8 @@ const Wrapper = styled.div`
     top: 0;
     left: 0;
     height: 100vh;
-    width: ${props => props.theme.main.sizes.leftMenu.width};
-    background: ${props => props.theme.main.colors.won.blueLight};
+    width: ${theme.main.sizes.leftMenu.width};
+    background: ${theme.main.colors.won.blueLight};
 
     /* scrollbar overrides */
     * {
@@ -23,35 +22,17 @@ const Wrapper = styled.div`
       }
 
       ::-webkit-scrollbar-thumb {
-        background-color: ${props => props.theme.main.colors.leftMenu['title-color']};
+        background-color: ${theme.main.colors.leftMenu["title-color"]};
       }
 
       ::-webkit-scrollbar-thumb:hover {
-        background-color: ${props => props.theme.main.colors.leftMenu['link-color']};
+        background-color: ${theme.main.colors.leftMenu["link-color"]};
       }
 
       /* firefox */
-      scrollbar-color: ${props => props.theme.main.colors.leftMenu['title-color']} transparent;
+      scrollbar-color: ${theme.main.colors.leftMenu["title-color"]} transparent;
     }
   `}
 `;
-
-Wrapper.defaultProps = {
-  theme: {
-    main: {
-      colors: {
-        strapi: {},
-      },
-      sizes: {
-        header: {},
-        leftMenu: {},
-      },
-    },
-  },
-};
-
-Wrapper.propTypes = {
-  theme: PropTypes.object,
-};
 
 export default Wrapper;
